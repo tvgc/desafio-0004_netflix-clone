@@ -35,6 +35,7 @@ body, button, input, textarea {
 
 body {
     background-color: var(--primary-color);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1, h2, h3 {
@@ -56,8 +57,12 @@ button {
     outline: none;
 }
 
+img {
+    max-width: 100%;
+}
 
-/* ================== CLASSE REUTILISÁVEIS ================== */
+
+/* ================== CLASSES REUTILISÁVEIS ================== */
 
 .container {
     max-width: 968px;
@@ -74,6 +79,11 @@ button {
     overflow: hidden;
 }
 
+.c-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 .section__title {
     font-size: var(--h1-font-size);
     color: var(--secundary-color);
@@ -85,3 +95,49 @@ button {
     color: var(--secundary-color);
     display: block;
 }
+
+.c-section__movies-body {
+    max-width: 1310px;
+    margin: auto;
+    overflow: hidden;
+}
+
+@media (min-width: 960px) and (max-width: 1310px) {
+    .c-section__movies-body {
+        max-width: 860px;
+    }
+}
+
+@media (min-width: 410px) and (max-width: 960px) {
+    .c-section__movies-body {
+        max-width: 410px;
+    }
+}
+
+.c-section__movie-container {
+    width: 410px;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.c-section__movie-container:first-child {
+    margin-left: 0;
+}
+
+.c-sliders {
+    width: 1000vw;
+}
+
+.c-section__btns-container, .c-section__episode {
+    display: none;
+}
+
+
+/* ================== UTILITÁRIOS ================== */
+
+.u-padding-left-right {
+    padding: 0px 40px;
+}
+
+/* próximos passos:
+ - selecionar um c-section__movie-container e modificar ele com transform e display block para ficar parecido com o figma */
