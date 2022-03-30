@@ -1,6 +1,7 @@
 :root {
     --primary-color: #010211;
     --secundary-color: #FFFCFC;
+    --third-color: #1E1C1C;
 
     /* ====== FONT TIPOGRAPHY ====== */
 
@@ -80,8 +81,8 @@ img {
 }
 
 .c-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .section__title {
@@ -90,10 +91,12 @@ img {
     margin-bottom: 2rem;
 }
 
-.section__subtitle {
+.c-section__subtitle {
     font-size: var(--h2-font-size);
     color: var(--secundary-color);
     display: block;
+    max-width: 1310px;
+    margin: 0px auto 20px auto;
 }
 
 .c-section__movies-body {
@@ -116,6 +119,7 @@ img {
 
 .c-section__movie-container {
     width: 410px;
+    min-height: auto;
     display: inline-block;
     margin-left: 40px;
 }
@@ -132,6 +136,70 @@ img {
     display: none;
 }
 
+.c-section__btns-container {
+    height: 100px;
+}
+
+.c-seciton__btns-container-left {
+    display: flex;
+}
+
+.c-section__btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--secundary-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+}
+
+.c-section__btn:first-child {
+    margin-left: 5px;
+}
+
+.c-section__btn--white {
+    background-color: var(--secundary-color);
+}
+
+.c-section__default-img-btn {
+    width: 38px;
+    height: 38px;
+}
+
+.c-section__defaul-img-btn--bigger {
+    width: 48px;
+    height: 48px;    
+}
+
+.c-section__epidose-number {
+    color: white;
+}
+
+.c-section__epidose-title {
+    color: white;
+}
+
+/* ================== IS HOVER ================== */
+
+.c-section__movie-container.is-hover {
+    transform: scale(130%);
+    background-color: var(--third-color);
+    min-height: 100%;
+}
+
+.c-section__btns-container.is-hover {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.c-section__episode.is-hover {
+    display: block;
+    background-color: aliceblue;
+}
 
 /* ================== UTILITÁRIOS ================== */
 
@@ -139,5 +207,11 @@ img {
     padding: 0px 40px;
 }
 
+.u-display-block {
+    display: block;
+}
+
 /* próximos passos:
- - selecionar um c-section__movie-container e modificar ele com transform e display block para ficar parecido com o figma */
+ - Finalizar o projeto de hover do conainer que fica no meio da section
+ - Finalizar o header 
+ - Após finaliza, pelo menos o que eu conseguir fazer, pedir feedback ao Cladio, e quem saber fazer uma chamada com ele.*/
